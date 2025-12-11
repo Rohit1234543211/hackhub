@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HackHub - Learn Hackathons</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      .fade-in {
+        animation: fadeIn 0.5s ease-in;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .hover-lift {
+        transition: transform 0.3s ease;
+      }
+      .hover-lift:hover {
+        transform: translateY(-5px);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav
+      class="bg-gradient-to-r from-blue-600 to-purple-600 text-white sticky top-0 z-50 shadow-lg"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-2xl font-bold">🚀 HackHub</h1>
+        <ul class="flex gap-6 cursor-pointer">
+          <li class="nav-link hover:text-yellow-300" data-section="home">
+            Home
+          </li>
+          <li class="nav-link hover:text-yellow-300" data-section="what">
+            What is Hackathon
+          </li>
+          <li class="nav-link hover:text-yellow-300" data-section="benefits">
+            Benefits
+          </li>
+          <li class="nav-link hover:text-yellow-300" data-section="process">
+            Process
+          </li>
+          <li class="nav-link hover:text-yellow-300" data-section="contact">
+            Contact
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="section bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20"
+    >
+      <div class="max-w-7xl mx-auto px-4 text-center fade-in">
+        <h2 class="text-5xl font-bold mb-4">Welcome to HackHub</h2>
+        <p class="text-xl mb-8">
+          Your complete guide to understanding and participating in hackathons
+        </p>
+        <button
+          class="bg-yellow-400 text-black px-8 py-3 rounded-lg font-bold hover:bg-yellow-500 transition"
+        >
+          Get Started
+        </button>
+      </div>
+    </section>
+
+    <!-- What is Hackathon -->
+    <section id="what" class="section py-16 px-4">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">
+          What is a Hackathon?
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white p-8 rounded-lg shadow-lg hover-lift">
+            <h3 class="text-2xl font-bold text-blue-600 mb-4">Definition</h3>
+            <p class="text-gray-700">
+              A hackathon is an event where programmers, designers, and
+              innovators collaborate intensively on software or hardware
+              projects, typically over 24-72 hours.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-lg hover-lift">
+            <h3 class="text-2xl font-bold text-purple-600 mb-4">Duration</h3>
+            <p class="text-gray-700">
+              Most hackathons last between 24 to 48 hours, providing teams with
+              focused time to brainstorm, develop, and present their ideas.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-lg hover-lift">
+            <h3 class="text-2xl font-bold text-green-600 mb-4">
+              Who Can Participate
+            </h3>
+            <p class="text-gray-700">
+              Open to students, professionals, and enthusiasts of all skill
+              levels. No prior experience required, just passion and creativity!
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-lg hover-lift">
+            <h3 class="text-2xl font-bold text-red-600 mb-4">Goals</h3>
+            <p class="text-gray-700">
+              Build innovative solutions, learn new technologies, network with
+              peers, and showcase your skills to potential employers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section id="benefits" class="section py-16 px-4 bg-gray-100">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">
+          Benefits of Hackathons
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-md hover-lift">
+            <div class="text-4xl mb-4">💡</div>
+            <h3 class="text-xl font-bold mb-3">Innovation</h3>
+            <p class="text-gray-700">
+              Foster creative thinking and develop cutting-edge solutions to
+              real-world problems.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md hover-lift">
+            <div class="text-4xl mb-4">🤝</div>
+            <h3 class="text-xl font-bold mb-3">Networking</h3>
+            <p class="text-gray-700">
+              Connect with like-minded developers, designers, and industry
+              professionals.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md hover-lift">
+            <div class="text-4xl mb-4">📚</div>
+            <h3 class="text-xl font-bold mb-3">Learning</h3>
+            <p class="text-gray-700">
+              Acquire new technical skills and gain practical experience in
+              software development.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md hover-lift">
+            <div class="text-4xl mb-4">🏆</div>
+            <h3 class="text-xl font-bold mb-3">Recognition</h3>
+            <p class="text-gray-700">
+              Win prizes, gain recognition, and boost your portfolio with real
+              project experience.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md hover-lift">
+            <div class="text-4xl mb-4">💼</div>
+            <h3 class="text-xl font-bold mb-3">Career Growth</h3>
+            <p class="text-gray-700">
+              Impress recruiters and land job opportunities with potential
+              employers.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md hover-lift">
+            <div class="text-4xl mb-4">🎯</div>
+            <h3 class="text-xl font-bold mb-3">Goal Achievement</h3>
+            <p class="text-gray-700">
+              Complete a functional project from concept to presentation in a
+              short timeframe.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hackathon Process -->
+    <section id="process" class="section py-16 px-4">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">Hackathon Process</h2>
+        <div class="space-y-8">
+          <div
+            class="flex gap-6 items-start bg-white p-6 rounded-lg shadow-md hover-lift"
+          >
+            <div
+              class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0"
+            >
+              1
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold mb-2">Registration</h3>
+              <p class="text-gray-700">
+                Sign up for the event, create a team or join an existing one,
+                and prepare your development environment.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex gap-6 items-start bg-white p-6 rounded-lg shadow-md hover-lift"
+          >
+            <div
+              class="bg-purple-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0"
+            >
+              2
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold mb-2">
+                Kickoff & Theme Announcement
+              </h3>
+              <p class="text-gray-700">
+                Event opens with an opening ceremony, introduction, rules
+                explanation, and problem statement or theme reveal.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex gap-6 items-start bg-white p-6 rounded-lg shadow-md hover-lift"
+          >
+            <div
+              class="bg-green-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0"
+            >
+              3
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold mb-2">Ideation & Planning</h3>
+              <p class="text-gray-700">
+                Brainstorm ideas, define project scope, allocate tasks, and
+                outline your approach to building the solution.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex gap-6 items-start bg-white p-6 rounded-lg shadow-md hover-lift"
+          >
+            <div
+              class="bg-yellow-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0"
+            >
+              4
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold mb-2">Development</h3>
+              <p class="text-gray-700">
+                Code, design, and build your project. Mentors and sponsors
+                provide support, APIs, and resources.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex gap-6 items-start bg-white p-6 rounded-lg shadow-md hover-lift"
+          >
+            <div
+              class="bg-red-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0"
+            >
+              5
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold mb-2">Submission & Demo</h3>
+              <p class="text-gray-700">
+                Submit your project, create a demo video or live presentation
+                showcasing your solution.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex gap-6 items-start bg-white p-6 rounded-lg shadow-md hover-lift"
+          >
+            <div
+              class="bg-indigo-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0"
+            >
+              6
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold mb-2">Judging & Awards</h3>
+              <p class="text-gray-700">
+                Judges evaluate projects based on innovation, functionality, and
+                impact. Winners are announced and prizes awarded.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section py-16 px-4 bg-gray-100">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">
+          Frequently Asked Questions
+        </h2>
+        <div class="space-y-4">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button
+              class="faq-btn w-full p-6 text-left font-bold text-lg hover:bg-gray-50 flex justify-between items-center"
+            >
+              <span>Do I need experience to participate?</span>
+              <span class="text-2xl">+</span>
+            </button>
+            <div class="faq-content hidden p-6 bg-gray-50">
+              <p class="text-gray-700">
+                No! Hackathons welcome participants of all skill levels. It's a
+                great opportunity to learn and grow.
+              </p>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button
+              class="faq-btn w-full p-6 text-left font-bold text-lg hover:bg-gray-50 flex justify-between items-center"
+            >
+              <span>What should I bring?</span>
+              <span class="text-2xl">+</span>
+            </button>
+            <div class="faq-content hidden p-6 bg-gray-50">
+              <p class="text-gray-700">
+                Bring your laptop, charger, ID, and enthusiasm! Most hackathons
+                provide meals and WiFi.
+              </p>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button
+              class="faq-btn w-full p-6 text-left font-bold text-lg hover:bg-gray-50 flex justify-between items-center"
+            >
+              <span>Can I participate solo?</span>
+              <span class="text-2xl">+</span>
+            </button>
+            <div class="faq-content hidden p-6 bg-gray-50">
+              <p class="text-gray-700">
+                Most hackathons encourage teams of 2-4 people, but solo
+                participation is often allowed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section py-16 px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">Get In Touch</h2>
+        <form class="bg-white p-8 rounded-lg shadow-lg" id="contactForm">
+          <div class="mb-6">
+            <label class="block font-bold mb-2">Name</label>
+            <input
+              type="text"
+              class="w-full border border-gray-300 p-3 rounded"
+              required
+            />
+          </div>
+          <div class="mb-6">
+            <label class="block font-bold mb-2">Email</label>
+            <input
+              type="email"
+              class="w-full border border-gray-300 p-3 rounded"
+              required
+            />
+          </div>
+          <div class="mb-6">
+            <label class="block font-bold mb-2">Message</label>
+            <textarea
+              class="w-full border border-gray-300 p-3 rounded h-32"
+              required
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition w-full"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 px-4">
+      <div class="max-w-7xl mx-auto text-center">
+        <p class="mb-2">
+          © 2024 HackHub - Learn Hackathons. All rights reserved.
+        </p>
+        <p class="text-gray-400">Made with ❤️ for the developer community</p>
+      </div>
+    </footer>
+
+    <script>
+      $(document).ready(function () {
+        // Navigation smooth scroll
+        $(".nav-link").click(function () {
+          let section = $(this).data("section");
+          $("html, body").animate(
+            {
+              scrollTop: $("#" + section).offset().top - 60,
+            },
+            1000
+          );
+        });
+
+        // FAQ accordion
+        $(".faq-btn").click(function () {
+          $(this).next(".faq-content").slideToggle();
+          $(this)
+            .find("span:last")
+            .text(function (i, text) {
+              return text === "+" ? "−" : "+";
+            });
+        });
+
+        // Form submission
+        $("#contactForm").submit(function (e) {
+          e.preventDefault();
+          alert("Thank you for your message! We will get back to you soon.");
+          this.reset();
+        });
+      });
+    </script>
+  </body>
+</html>
